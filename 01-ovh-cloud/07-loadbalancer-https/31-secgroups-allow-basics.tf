@@ -1,0 +1,1 @@
+../_common/31-secgroups-allow-basics.tf

@@ -1,0 +1,1 @@
+../_common/56-instance-bastion.tf

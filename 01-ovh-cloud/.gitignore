@@ -1,0 +1,5 @@
+.idea
+*.tfstate
+terraform.state
+*.auto.tfvars*
+secrets.auto.tfvars
