@@ -1,0 +1,18 @@
+version: '3.0'
+services:
+  db:
+    image: postgres:14.1
+    restart: always
+    environment:
+      - POSTGRES_USER=terraform
+      - POSTGRES_PASSWORD=somepassword
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+    command: >
+      -c ssl=on 
+      -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem       
+      -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key 
+volumes:
+  db:
