@@ -4,22 +4,7 @@ variable ovh_auth_url {
   default     = "https://auth.cloud.ovh.net/v3/"
 }
 
-# OVH API
-# Documentation: https://help.ovhcloud.com/csm/fr-api-getting-started-ovhcloud-api
-# Getting your keys: https://www.ovh.com/auth/api/createToken
 
-variable "ovh_app_key" {
-  description = "OVH API: Access part"
-  type        = string
-}
-variable "ovh_app_secret" {
-  description = "OVH API: Secret part "
-  type        = string
-}
-variable "ovh_consumer_key" {
-  description = "OVH API: Secret part "
-  type        = string
-}
 # OpenStack Variables
 # Documentation: https://help.ovhcloud.com/csm/fr-public-cloud-compute-set-openstack-environment-variables?
 variable "openstack_user_name" {
