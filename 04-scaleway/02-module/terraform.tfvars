@@ -5,7 +5,7 @@ env                            = "dev"
 
 # Instance
 instance_size_in_gb            = 50
-instance_type                  = "GP1-S"
+instance_type                  = "PLAY2-PICO"
 instance_image                 = "ubuntu_focal"
 volume_size_in_gb              = 30
 volume_type                    = "l_ssd"
@@ -28,7 +28,7 @@ kapsule_cluster_version = "1.22"
 kapsule_pool_size       = 2
 kapsule_pool_min_size   = 2
 kapsule_pool_max_size   = 4
-kapsule_pool_node_type  = "GP1-S"
+kapsule_pool_node_type  = "PLAY2-PICO"
 cni                     = "calico"
 
 # LoadBalancer
