@@ -1,1 +1,0 @@
-../_common/54-instances-floating-ip.tf

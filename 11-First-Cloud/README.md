@@ -21,7 +21,7 @@ Une première infrastructure limitée à une instance avec une adresse IP publiq
 
 ### 4. Terminer en lançant la destruction
 
-. terraform destroy
+- terraform destroy
 
 
 

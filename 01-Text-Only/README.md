@@ -26,6 +26,6 @@ En lançant une commande `$ find .` dans le dossier, quels fichiers sont apparus
 
 ### 3. Terminer en lançant la destruction
 
-. terraform destroy
+- terraform destroy
 
 
