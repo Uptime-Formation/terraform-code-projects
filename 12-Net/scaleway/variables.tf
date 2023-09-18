@@ -1,6 +1,6 @@
 variable "machine_count" {
   description = "Number of virtual machines in private network"
-  default = 3
+  default = 1
 }
 variable "machine_flavor" {
   description = "Type of server to provision"
