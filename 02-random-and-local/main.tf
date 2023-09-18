@@ -9,10 +9,6 @@ terraform {
       source  = "hashicorp/local"
       version = "~> 2.0"
     }
-    archive = {
-      source  = "hashicorp/archive"
-      version = "~> 2.0"
-    }
   }
 }
 
@@ -77,11 +73,4 @@ resource "local_file" "mad_libs" {
       adverbs    = random_shuffle.random_adverbs[count.index].result
       numbers    = random_shuffle.random_numbers[count.index].result
   })
-}
-
-data "archive_file" "mad_libs" {
-  depends_on  = [local_file.mad_libs] #A
-  type        = "zip"
-  source_dir  = "${path.module}/madlibs"  #C
-  output_path = "${path.cwd}/madlibs.zip" #B
 }
