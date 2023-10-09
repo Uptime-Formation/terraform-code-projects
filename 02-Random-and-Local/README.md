@@ -20,7 +20,7 @@
 - Modifier la variable `num_files`
 - Modifier la variable `words` 
 - Modifier la fonction de transformation de `words` 
-- Ajouter le provider `hashicord_archive` et une ressource pour faire un fichier zip avec le dossier généré par la recette
+- Ajouter le provider `hashicord_archive` et une `data` (attention!) pour faire un fichier zip avec le dossier généré par la recette
 
 ### 4. Terminer en lançant la destruction
 
