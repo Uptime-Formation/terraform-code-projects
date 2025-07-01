@@ -1,6 +1,6 @@
 provider "aws" {
-  region = "us-west-2"
-  profile = "tfuser"
+  region  = "eu-west-3"
+  profile = "<tfuser>"
 }
 
 data "aws_ami" "ubuntu" {
@@ -15,7 +15,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "helloworld" {
-  ami           = data.aws_ami.ubuntu.id 
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   tags = {
     Name = "HelloWorld"
