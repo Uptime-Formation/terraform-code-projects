@@ -14,14 +14,13 @@ Cette recette est très simple et produit un seul objet, sans utiliser d'entrée
 
 En lançant une commande `$ find .` dans le dossier, quels fichiers sont apparus et que contiennent-ils ?
 
-
 ### 2. Modifier la recette ou les ressources en cours de route 
 
 **Observer ce qui se passe en lançant `terraform plan` à chaque modification.**
 
 - Déplacer la configuration du provider dans un fichier provider.tf 
 - Modifier le contenu de l'attribut `content` de la ressource `local_file`  
-- Quels autres attributs du `local_file` peut-on modifier ? Comment ? 
+- Quels autres attributs du `local_file` peut-on modifier ? Comment ? (cherchez le provider hashicorp local sur le registry terraform)
 - Modifier le fichier `adam-douglas.txt` en local.
 
 ### 3. Terminer en lançant la destruction

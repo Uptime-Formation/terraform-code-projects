@@ -30,9 +30,7 @@ $ find . -type f
 
 > Ajouter des attributs à la ressource.
 >       + directory_permission = "0777"
->       + file_permission      = "0777"
-
-
+>       + file_permission      = "0600"
 
 - Modifier le fichier `adam-douglas.txt` en local.
 
