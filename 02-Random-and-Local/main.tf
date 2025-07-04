@@ -28,7 +28,6 @@ variable "num_files" {
   type    = number
 }
 
-
 locals {
   uppercase_words = { for k, v in var.words : k => [for s in v : upper(s)] }
 }

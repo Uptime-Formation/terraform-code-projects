@@ -1,0 +1,22 @@
+graph TB
+    subgraph AWS["AWS Cloud (eu-west-3)"]
+        subgraph Provider["Provider Configuration"]
+            P[/"AWS Provider<br/>Region: eu-west-3<br/>Profile: tfuser"/]
+        end
+        
+        subgraph DataSources["Data Sources"]
+            AMI[/"Ubuntu AMI<br/>Filter: ubuntu-focal-20.04<br/>Owner: Canonical"/]
+        end
+        
+        subgraph Resources["Resources"]
+            EC2["EC2 Instance<br/>Name: HelloWorld<br/>Type: t2.micro<br/>AMI: Ubuntu 20.04"]
+        end
+        
+        P --> AMI
+        AMI --> EC2
+    end
+    
+    style AWS fill:#FF9900,color:#fff
+    style EC2 fill:#ec7211,color:#fff
+    style AMI fill:#759EEA,color:#fff
+    style P fill:#232F3E,color:#fff

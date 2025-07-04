@@ -6,9 +6,10 @@ terraform {
   }
   required_version = ">= 0.13"
 }
+
 provider "scaleway" {
-  zone            = "fr-par-1"
-  region          = "fr-par"
+  zone   = "fr-par-1"
+  region = "fr-par"
 }
 
 resource "scaleway_instance_ip" "public_ip" {}

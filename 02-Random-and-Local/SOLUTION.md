@@ -24,24 +24,27 @@
 
 ### 3. Modifier et relancer la recette 
 
-- Créer plusieurs fichiers avec le fichier unique `main.tf` 
-
-> Ne produit pas de changement.
-
 - Modifier la variable `num_files`
 
 > Change le nombre de fichiers produits
 
 - Modifier la variable `words` 
 
-> Change le plan de la recette
+> Change le plan de la recette. Toutes les resources (fichiers) dont le contenu est impacté sont remplacés c'est a dire supprimées et recrées.
 
 - Modifier la fonction de transformation de `words` 
 
-> Change le plan de la recette
+> Change le plan de la recette. Toutes les resources (fichiers) dont le contenu est impacté sont remplacés c'est a dire supprimées et recrées.
 
 - Ajouter le provider `hashicord_archive` et une ressource pour faire un fichier zip avec le dossier généré par la recette
-```terraform
+
+```coffee
+...
+    archive = {
+      source = "hashicorp/archive"
+      version = "2.7.1"
+    }
+...
 
 data "archive_file" "mad_libs" {
   depends_on  = [local_file.mad_libs] #A

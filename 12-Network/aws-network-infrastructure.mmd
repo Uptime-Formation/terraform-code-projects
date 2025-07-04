@@ -1,0 +1,33 @@
+graph TB
+    subgraph AWS["AWS Cloud"]
+        subgraph VPC["VPC (10.1.0.0/16)"]
+            subgraph Subnet["Subnet (10.1.0.0/16)"]
+                ENI["Network Interface<br/>primary_network_interface"]
+                EC2["EC2 Instance<br/>Name: net_instance<br/>Type: t2.micro<br/>AMI: Ubuntu 20.04"]
+            end
+        end
+        
+        subgraph DataSources["Data Sources"]
+            AMI[/"Ubuntu AMI<br/>Filter: ubuntu-focal-20.04<br/>Owner: Canonical"/]
+        end
+        
+        subgraph Variables["Variables"]
+            VAR_REGION["aws_region"]
+            VAR_CIDR["base_cidr_block<br/>Default: 10.1.0.0/16"]
+        end
+    end
+    
+    VAR_REGION --> VPC
+    VAR_CIDR --> VPC
+    VPC --> Subnet
+    Subnet --> ENI
+    ENI --> EC2
+    AMI --> EC2
+    
+    style AWS fill:#FF9900,color:#fff
+    style VPC fill:#4CAF50,color:#fff
+    style Subnet fill:#81C784,color:#fff
+    style EC2 fill:#ec7211,color:#fff
+    style ENI fill:#2196F3,color:#fff
+    style AMI fill:#759EEA,color:#fff
+    style Variables fill:#9C27B0,color:#fff

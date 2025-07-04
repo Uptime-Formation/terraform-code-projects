@@ -8,7 +8,7 @@
 > Les trois recettes ont des comportements proches:   
 > . AWS est la plus simple   
 > . Scaleway nécessite une ressource IP supplémentaire  
-> . OVH propose de créer une clef SSH additionnelle pour se connecter
+> . OVH utilise le provider generique de openstack et propose de créer une clef SSH additionnelle pour se connecter
 
 ### 2. Choisir un provider et comprendre comment s'y connecter  
 

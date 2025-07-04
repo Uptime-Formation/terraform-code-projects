@@ -1,6 +1,6 @@
 provider "aws" {
-  region  = "eu-west-3"
-  profile = "<tfuser>"
+  region = "eu-west-3"
+
 }
 
 data "aws_ami" "ubuntu" {

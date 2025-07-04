@@ -16,7 +16,6 @@
 
 ### 3. Modifier et relancer la recette 
 
-- Créer plusieurs fichiers avec le fichier unique `main.tf` 
 - Modifier la variable `num_files`
 - Modifier la variable `words` 
 - Modifier la fonction de transformation de `words` 
